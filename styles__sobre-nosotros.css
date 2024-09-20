@@ -4,7 +4,11 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: #333;
+        
+    background-image: url(images/fondo.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
     font-family: "Roboto", sans-serif;
 }
@@ -15,7 +19,9 @@ body {
     
     height: 200px;
     width: 100vw;
-    background-color: #232323;
+    background-color: #151718fa;
+
+    box-shadow: 0px 5px 15px #000;
 }
 
 
@@ -152,7 +158,14 @@ hr {
     justify-content: center;
     align-items: center;
     
-    background-color: #2b2b2b;
+    text-align: justify;
+}
+
+.second-section nav {
+    margin: 0 15px;
+    background-color: #151718f0;
+
+    box-shadow: 0px 0px 5px #000;
 }
 
 .second-section h2 {
@@ -160,18 +173,16 @@ hr {
     margin: 40px 0 0px;
     font-weight: 500;
     color: #d5d5d5;
-}
 
-.second-section b {
-    color: #d5d5d5;
-    font-size: 40px;
-    font-weight: 800;
+    text-align: center;
 }
 
 .second-section p {
     color: #d5d5d5;
     font-size: 25px;
     font-weight: 500;
+
+    padding: 0 25px;
 }
 
 .second-section a {
@@ -206,6 +217,8 @@ footer {
     justify-content: center;
     width: 100vw;
     background-color: #232323;
+
+    box-shadow: 0px -5px 15px #000;
 }
 
 footer nav {

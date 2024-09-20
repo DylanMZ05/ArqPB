@@ -82,20 +82,21 @@ body {
 }
 
 .menu ul {
-    padding: 100px 20px 0;
+    padding: 100px 20px 100px 40px;
 }
 
-.menu ul li a {
+.menu-list {
     text-decoration: none;
     letter-spacing: 4px;
     font-size: 24px;
-    color: #333;
+    color: #676767;
+    width: 180px;
     padding: 10px 0px;
     display: block;
     transition: background-color 0.3s ease;
 }
 
-.menu ul li a:hover {
+.menu-list:hover {
     background-color: #f4f4f4;
 }
 
@@ -139,6 +140,7 @@ hr {
     height: 2px;
     background-color: #8d8d8d90;
     margin: 10px 0; 
+    width: 220px;
 }
 
 
@@ -255,4 +257,8 @@ footer img {
 
 .spacing {
     letter-spacing: 4px;
+}
+
+.black {
+    color: #000000;
 }
