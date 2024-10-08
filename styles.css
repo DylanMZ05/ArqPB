@@ -17,6 +17,8 @@ body {
     height: 200px;
     width: 100vw;
     background-color: #232323f3;
+
+    z-index: 100;
 }
 
 
@@ -152,9 +154,12 @@ hr {
     background-image: url(images/fondo.webp);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     height: 900px;
     width: 100vw;
+    position: relative; /* Asegura que la sección mantenga su posición */
+
+    z-index: 1;
 }
 
 
@@ -167,6 +172,8 @@ hr {
 
 
 .second-section {
+    position: relative;
+    
     margin-top: -200px;
     display: flex;
     flex-direction: column;
@@ -174,6 +181,8 @@ hr {
     align-items: center;
     
     background-color: #232628ef;
+
+    z-index: 99;
 }
 
 .second-section h2 {
