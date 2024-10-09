@@ -1,12 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
-    height: 100vh;
+    min-height: 100vh; /* Altura del viewport */
     margin: 0;
     padding: 0;
-    background-color: #333;
+    background-image: url(images/fondo.webp);
+    background-size: cover; /* Asegura que la imagen cubra toda el área disponible */
+    background-position: top center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Hace que la imagen se mantenga fija al fondo, incluso al hacer scroll */
+    background-size: 400%;
 
-    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+
+    font-family: "Poppins", sans-serif;
 }
 
 .header {
@@ -32,7 +39,7 @@ body {
     height: 30px;
     position: absolute;
     top: 50px;
-    right: 25px;
+    right: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -108,18 +115,6 @@ body {
     padding: 0;
 }
 
-.hamburger {
-    cursor: pointer;
-    width: 40px;
-    height: 30px;
-    position: absolute;
-    top: 50px;
-    right: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: 20;
-}
 
 .hamburger.active .line:nth-child(1) {
     transform: rotate(45deg);
@@ -151,13 +146,9 @@ hr {
 
 
 .first-section {
-    background-image: url(images/fondo.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+    background-color: #00000000;
     height: 900px;
-    width: 100vw;
-    position: relative; /* Asegura que la sección mantenga su posición */
+    width: 100%;
 
     z-index: 1;
 }
@@ -183,40 +174,45 @@ hr {
     background-color: #232628ef;
 
     z-index: 99;
+
+    width: 100%;
 }
 
 .second-section h2 {
     font-size: 30px;
-    margin: 40px 0 0px;
+    margin: 110px 0 10px;
     font-weight: 500;
     color: #d5d5d5;
 }
 
 .second-section b {
     color: #d5d5d5;
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 800;
 }
 
 .second-section p {
     color: #d5d5d5;
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 500;
 }
 
 .second-section a {
     color: #d5d5d5;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
     margin-bottom: 50px;
 }
 
 .second-section img {
-    width: 80vw;
+    width: 70vw;
+    max-width: 500px;
+
 }
 
 .second-section div {
-    margin: 20px 0;
+    margin: 50px 0;
+    max-width: max-content;
 }
 
 .text {
@@ -224,6 +220,15 @@ hr {
     display: flex;
     justify-content: start;
     align-items: start;
+
+    line-height: 1;
+}
+
+.text-h2 {
+    width: 80vw;
+    max-width: 500px;
+
+    text-align: start;
 }
 
 .proyect-container {
@@ -235,7 +240,7 @@ footer {
     align-items: center;
     justify-content: center;
     width: 100vw;
-    background-color: #1d1c1b;
+    background-color: #1d1c1bf8;
 }
 
 footer nav {
@@ -270,4 +275,39 @@ footer img {
 
 .black {
     color: #000000;
+}
+
+@media (min-width: 900px) {
+    body {
+    background-size: 190%;
+    }
+
+    .second-section img {
+        width: 50vw;
+        max-width: 480px;
+    }
+
+    .text {
+        width: 300px;
+    }
+
+    .text-h2 {
+        width: 90vw;
+        max-width: 835px;
+        text-align: start;
+    }
+
+    .second-section__proyectos {
+        width: 95vw;
+        
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .second-section__proyectos__txt {
+        padding-left: 50px;
+        height: 100%;
+    }
 }

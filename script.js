@@ -7,9 +7,15 @@ hamburger.addEventListener('click', () => {
 });
 
 document.addEventListener('scroll', function() {
-    const scrollPosition = window.scrollY; // Obtiene la posición actual del scroll
-    const firstSection = document.querySelector('.first-section');
+    const scrollPosition = window.scrollY; 
+    const firstSection = document.querySelector('body');
     
-    // Ajusta la posición del background en función del scroll, dividiendo por 4 para un desplazamiento lento
-    firstSection.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+    // Solo aplica el efecto si el ancho es mayor o igual a 1000px
+    if (window.innerWidth >= 50) {
+        // Ajusta este valor para modificar la velocidad del efecto parallax
+        firstSection.style.backgroundPositionY = `${-scrollPosition * 0.1}px`;
+    } else {
+        // Restablece la posición de fondo en pantallas pequeñas
+        firstSection.style.backgroundPositionY = 'top';
+    }
 });
