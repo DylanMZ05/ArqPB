@@ -171,7 +171,7 @@ hr {
     justify-content: center;
     align-items: center;
     
-    background-color: #232628ef;
+    background-color: rgb(50 50 50 / 94%);
 
     z-index: 99;
 
@@ -208,11 +208,6 @@ hr {
     width: 70vw;
     max-width: 500px;
 
-}
-
-.second-section div {
-    margin: 50px 0;
-    max-width: max-content;
 }
 
 .text {
@@ -307,6 +302,11 @@ footer img {
     }
 
     .second-section__proyectos__txt {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column;
+        
         padding-left: 50px;
         height: 100%;
     }
